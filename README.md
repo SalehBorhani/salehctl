@@ -7,7 +7,7 @@ Implement the minimal kubectl to get better understanding of kubectl and kuberne
 </p>
 
 
-## Up and Running
+## Build and Running
 ```bash
 go build
 ./salehctl apply -f config-example.yml
