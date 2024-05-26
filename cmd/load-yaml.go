@@ -28,5 +28,5 @@ func loadYaml(yaml_file string) {
 		defer logger.Sync()
 		logger.Info("Failed to load the file...")
 	}
-	fmt.Printf("%s is %s", obj.Name, obj.Kind)
+	fmt.Printf("%s is %s\n", obj.Name, obj.Kind)
 }
