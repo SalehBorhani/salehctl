@@ -12,17 +12,17 @@ type Object struct {
 	Name string `yaml:"name"`
 }
 
-func loadYaml(yaml_file string) {
+func loadYaml(yamlFile string) {
 	var obj Object
 
-	yamlFile, err := os.ReadFile(yaml_file)
+	file, err := os.ReadFile(yamlFile)
 	if err != nil {
 		logger, _ := zap.NewProduction()
 		defer logger.Sync()
 		logger.Info("Failed to read the file...")
 	}
 
-	err = yaml.Unmarshal(yamlFile, &obj)
+	err = yaml.Unmarshal(file, &obj)
 	if err != nil {
 		logger, _ := zap.NewProduction()
 		defer logger.Sync()
